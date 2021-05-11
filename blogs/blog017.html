@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes"> <!-- or no?? -->
+
+<title>sap218 site | blogs</title> <!-- browser tab title -->
+
+<meta name="author" content="Samantha C Pendleton">
+<meta name="description" content="data scientist">
+<meta name="keywords" content="science, data">
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> <!-- Latest compiled and minified CSS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- jQuery library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> <!-- Popper JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> <!-- Latest compiled JavaScript -->
+
+<!-- Bootstrap Settings <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/carousel/"> -->
+<!-- Custom styles for this template <link href="css/carousel.css" rel="stylesheet"> -->
+
+<!-- Icons -->
+<link rel="sheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<!-- https://fontawesome.com/icons?d=gallery -->
+
+
+
+
+
+<!--<link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon"> OLD--> 
+<!--<link rel="shortcut icon" href="images/icon/favicon.png" type="image/x-icon">-->
+
+<link rel="shortcut icon" href="../images/icon/favicon_io/favicon.ico" type="image/x-icon"> 
+<link rel="shortcut icon" href="../images/icon/favicon_io/favicon-16x16.png" type="image/x-icon">
+<link rel="shortcut icon" href="../images/icon/favicon_io/favicon-32x32.png" type="image/x-icon">
+<link rel="shortcut icon" href="../images/icon/favicon_io/apple-touch-icon.png" type="image/x-icon">
+<link rel="shortcut icon" href="../images/icon/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+<link rel="shortcut icon" href="../images/icon/favicon_io/android-chrome-192x192.png" type="image/x-icon">
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<!-- BODY START -->
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color:white"> <!-- whitesmoke https://htmlcolorcodes.com/color-names/ -->
+
+
+
+
+
+
+<!-- START OF HEADER -->
+<header>
+<nav class="navbar navbar-expand-md justify-content-center navbar-light fixed-top" style="background-color:lavenderblush;"> <!-- bg-light // lavenderblush // lemonchiffon // lightseagreen -->
+
+<button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+<span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
+
+
+<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent1">
+
+  <ul class="navbar-nav"> <!-- mr-auto"> -->
+      <li class="nav-item"><a class="nav-link" href="../index.html#home"><b>sap218  <i class="fas fa-sun"></i></b></a></li> 
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>blogs</b></a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../index.html#blogs">recent</a>
+          <!--<div class="dropdown-divider"></div>-->
+          <a class="dropdown-item" href="archived_blogs.html">archived</a>
+        </div>
+      </li>
+
+      <li class="nav-item"><a class="nav-link" href="../index.html#academia"><b>academia</b></a></li>
+      <li class="nav-item"><a class="nav-link" href="../index.html#contact"><b>contact</b></a></li>
+  </ul>
+
+</div>
+
+
+</nav>
+</header>
+<!-- END OF HEADER -->
+
+
+
+
+
+
+<div class="container-sm"> <!-- STARTING CONTENT -->
+
+<h1 id="home"><small>.</small></h2>
+
+<br />
+
+<!-- ARCHIVED BLOGS -->
+<h2><small>Jabberwocky</small></h2>
+
+<p><strong>11/05/2021</strong></p>
+
+<br />
+
+<blockquote class="blockquote">
+<p>"toolkit for those nonsensical ontologies"</p>
+</blockquote>
+
+<br />
+
+<p>
+Jabberwocky is a <code>Python</code> toolkit designed for ontology manipulation and natural language processing (NLP) [1]. Unstructured text is a valuable resource for research and extracting important sentences is a complicated task - we can extract valuable information using terms, however we can potentially extract more with synonyms, especially synonyms common in that domain of knowledge.
+<br>
+Ontologies are a useful as they condense a domain of knowledge in a structured manner - for example when looking at an ontology for anatomy, we can see that: hand is part of arm. The information surrrounding "arm" can include a description in addition to synonyms, e.g. "upper limb".
+<br>
+Current existing tools, such as <code>spaCy</code> or <code>NLTK</code>, are brilliant in the domain for NLP, however don't include an ontology plug-in aspect.
+</p>
+
+<p>
+Jabberwocky allows a user to extract synonyms from an ontology giving words of interest, e.g. "arm", "foot", and "head".
+Jabberwocky uses <code>spaCy PhraseMatcher</code> to curate sentences from a text document using these words and synonyms of interest. 
+Using the methods from Braithwaite et al. (2020), Jabberwocky offers a <code>tf-idf</code> statistical analysis for users to view terms of importance [2].
+Viewing these high scoring important terms, you may notice synoynms which weren't previously in the ontology or which you didn't consider, you can update the ontology by adding new synonyms.
+<br>
+With these new synonyms, you can re-run Jabberwocky to curate more sentences using these words and updated synonyms of interest.
+</p>
+
+<p>
+Jabberwocky v1.0 was released June 2020, however <b>v2.0</b> was released May 2021. Version 2 update includes <code>spaCy PhraseMatcher</code> for sentence extraction and the ability to plot the <code>tf-idf</code> top-30 terms.
+</p>
+
+<br />
+
+<p><a href="https://github.com/sap218/jabberwocky" class="btn btn-secondary">GitHub</a> <a href="https://joss.theoj.org/papers/10.21105/joss.02168" class="btn btn-secondary">Paper</a> <a href="https://sap218.github.io/jabberwocky/" class="btn btn-secondary">Documentation</a> <a href="https://sap218.github.io/jabberwocky/SCENARIO.html" class="btn btn-secondary">Scenario</a></p>
+
+<br />
+
+<p>
+<b>References</b>
+<br>
+[1] Pendleton, S., & Gkoutos, G. (2020). Jabberwocky: an ontology-aware toolkit for manipulating text. Journal of Open Source Software, 5(51), 2168.
+<br>
+[2] Braithwaite, T., Pendleton, S., Liu, X., Gilbert, R., Slater, L., Karwath, A., Davis, N., Pesudovs, K., Gkoutos, G., & Denniston, A. (2020). Development of a machine learning-guided computational ocular immune-mediated inflammatory disease ontology (ocIMIDo) and application to unstructured text in online patient fora for sentiment analysis. 61, 2061–2061.
+</p>
+
+<br />
+<br />
+
+
+
+</div> <!-- /.container --> <!-- END CONTENT -->
+
+
+
+<!-- FOOTER -->
+<footer class="container">
+	<p class="float-right"><a href="#home">Back to top</a></p>
+	<p>sap218 &middot; <a href="https://twitter.com/sap218"><img src="../images/social_media/twitter.png" alt="twitter" style="width:30px;height:30px;"></a> &middot; <a href="https://github.com/sap218"><img src="../images/social_media/github.png" alt="twitter" style="width:30px;height:30px;"></a></p>
+
+</footer>
+
+
+</body> <!-- END OF BODY -->
+</html>
